@@ -1,0 +1,19 @@
+{
+  "name": "auth-example",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "generate": "smithy build",
+    "postgenerate": "rm -rf generated-sdk && cp -r build/smithy/source/typescript-codegen generated-sdk && cd generated-sdk && npm install && npm run build",
+    "test:auth": "npx tsx test-auth.ts"
+  },
+  "dependencies": {
+    "@example/client": "file:./generated-sdk"
+  },
+  "devDependencies": {
+    "@smithy/types": "^3.0.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0",
+    "yarn": "^1.22.22"
+  }
+}

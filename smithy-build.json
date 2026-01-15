@@ -1,0 +1,18 @@
+{
+    "version": "1.0",
+    "sources": ["model"],
+    "maven": {
+        "dependencies": [
+            "software.amazon.smithy:smithy-model:1.65.0",
+            "software.amazon.smithy:smithy-aws-traits:1.65.0",
+            "software.amazon.smithy.typescript:smithy-aws-typescript-codegen:0.42.0"
+        ]
+    },
+    "plugins": {
+        "typescript-codegen": {
+            "service": "com.example#ExampleService",
+            "package": "@example/client",
+            "packageVersion": "1.0.0"
+        }
+    }
+}
